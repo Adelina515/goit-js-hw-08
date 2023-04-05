@@ -5,7 +5,7 @@ import player from "@vimeo/player";
     const player = new Vimeo.Player(iframe);
     player.on('timeupdate', _.throttle(onPlay, 1000));
         
-//    localStorage.setItem("videoplayer-current-time", "videoplayer-current-time");
+   localStorage.setItem("videoplayer-current-time", "videoplayer-current-time");
     
     /*
     Вивчи документацію методу on() і почни відстежувати подію timeupdate - 
