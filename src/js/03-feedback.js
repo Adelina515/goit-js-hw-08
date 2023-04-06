@@ -40,9 +40,13 @@ function hendleFormInput(ev) {
 
 function hendleFormSubmit(ev) {
     ev.preventDefault();
-
-    ev.currentTarget.reset();
+    if (!form.message.value && !form.email.value) {
+        return "заповніть всі поля"
+    } else {
+        ev.currentTarget.reset();
     localStorage.removeItem(STOREGE_KEY);
+    }
+    
     
 };
 
