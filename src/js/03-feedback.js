@@ -40,8 +40,8 @@ function hendleFormInput(ev) {
 
 function hendleFormSubmit(ev) {
     ev.preventDefault();
-    if (!form.message.value && !form.email.value) {
-        return "заповніть всі поля"
+    if (!form.message.value || !form.email.value) {
+         alert("заповніть всі поля")
     } else {
         ev.currentTarget.reset();
     localStorage.removeItem(STOREGE_KEY);
